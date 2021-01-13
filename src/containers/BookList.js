@@ -2,6 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+const mapStateToProps = state => ({
+    books: state.books,
+})
+
 const BookList = props => {
     return (
         <table>

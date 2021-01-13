@@ -1,10 +1,13 @@
 import React from 'react'
 import Proptypes from 'prop-types';
 
-export default function Book() {
+const Book = ({book}) => {
+    const { id, title, category } = book;
     return (
         <div>
         <h1>books</h1>
         </div>
     )
 }
+
+export default Book;
