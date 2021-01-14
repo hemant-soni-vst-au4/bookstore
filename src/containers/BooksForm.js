@@ -1,24 +1,24 @@
-import React from "react";
-import { connect } from "react-redux";
-import { categories } from "../constant";
+import React from 'react';
+import { connect } from 'react-redux';
+import { categories } from '../constant';
 
 const BooksForm = () => (
   <form>
-    <div class="form-group">
-      <label for="title">Title</label>
-      <input type="text" class="form-control" id="title" placeholder="Title" />
+    <div className="form-group">
+      <input type="text" className="form-control" id="title" placeholder="Title" />
     </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        {categories.map((category, index) => {
+    <div className="form-group">
+      <select className="form-control" id="category">
+        {
+        categories.map((category, index) => ( // eslint-disable-next-line react/no-array-index-key
           <option key={index} value={category}>
             {category}
-          </option>;
-        })}
+          </option>
+        ))
+        }
       </select>
     </div>
-    <button type="submit" class="btn btn-primary">
+    <button type="submit" className="btn btn-primary">
       Add Book
     </button>
   </form>

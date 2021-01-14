@@ -1,5 +1,5 @@
-import React from "react";
-import Proptypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Book = ({ book }) => {
   const { id, title, category } = book;
