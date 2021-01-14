@@ -1,15 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
+import { categories } from "../constant";
 
-const categories = [
-  "Action",
-  "Biography",
-  "History",
-  "Horror",
-  "Kids",
-  "Learning",
-  "Sci-Fi",
-];
 const BooksForm = () => (
   <form>
     <div class="form-group">
@@ -27,7 +19,7 @@ const BooksForm = () => (
       </select>
     </div>
     <button type="submit" class="btn btn-primary">
-      Submit
+      Add Book
     </button>
   </form>
 );
