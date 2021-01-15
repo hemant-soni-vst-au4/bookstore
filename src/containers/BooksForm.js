@@ -8,7 +8,9 @@ const mapDispatchToProps = dispatch => ({
   createBook: book => dispatch(createBook(book)),
 });
 
-const BooksForm = () => {
+const BooksForm = ({
+  createBook,
+}) => {
   const intialstate = {
     title: '',
     category: categories[0],
@@ -54,15 +56,14 @@ const BooksForm = () => {
         }
         </select>
       </div>
-      <button type="submit" onClick={handleSubmit} className="btn btn-primary">
+      <button type="button" onClick={handleSubmit} className="btn btn-primary">
         Add Book
       </button>
     </form>
   );
 };
 
-BooksForm.prototype = {
+BooksForm.propTypes = {
   createBook: PropTypes.func.isRequired,
 };
-
 export default connect(null, mapDispatchToProps)(BooksForm);
