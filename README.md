@@ -1,6 +1,6 @@
 # Bookstore
 
-> A bookstore where you can add, remove and can see the books.Build using react and redux.
+> A bookstore where you can add, remove and see the books.Build using react and redux.
 
 ## Built With
 
