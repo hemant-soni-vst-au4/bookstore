@@ -2,7 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { categories } from '../constant';
 
-const BooksForm = () => (
+const BooksForm = () => {
+  const intialstate = {
+    title: '',
+    category: categories[0]
+  }
+return (
   <form>
     <div className="form-group">
       <input type="text" className="form-control" id="title" placeholder="Title" />
@@ -23,5 +28,5 @@ const BooksForm = () => (
     </button>
   </form>
 );
-
+}
 export default connect(null, null)(BooksForm);
