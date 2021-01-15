@@ -16,13 +16,20 @@ const BooksForm = () => {
       title: event.target.value,
     })
   }
+
+  const handleSelectChange = event => {
+    setstate({
+      ...state,
+      category: event.target.value,
+    })
+  }
 return (
   <form>
     <div className="form-group">
       <input type="text" onChange={handleInputChange} className="form-control" id="title" placeholder="Title" value={state.title} />
     </div>
     <div className="form-group">
-      <select className="form-control" id="category">
+      <select className="form-control" onChange={handleSelectChange} id="category">
         {
         categories.map((category, index) => ( // eslint-disable-next-line react/no-array-index-key
           <option key={index} value={category}>
