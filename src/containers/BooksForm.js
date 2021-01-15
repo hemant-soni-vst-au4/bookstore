@@ -7,10 +7,19 @@ const BooksForm = () => {
     title: '',
     category: categories[0]
   }
+
+  const [state, setstate] = useState(initialState);
+
+  const handleInputChange = event => {
+    setstate({
+      ...state,
+      title: event.target.value,
+    })
+  }
 return (
   <form>
     <div className="form-group">
-      <input type="text" className="form-control" id="title" placeholder="Title" />
+      <input type="text" onChange={handleInputChange} className="form-control" id="title" placeholder="Title" value={state.title} />
     </div>
     <div className="form-group">
       <select className="form-control" id="category">
