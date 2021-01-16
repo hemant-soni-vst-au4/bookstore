@@ -30,7 +30,7 @@ const BooksForm = ({
     if (state.title === '') return;
     createBook({
       ...state,
-      id: Math.floor(Math.random() * 100),
+      id: Date.now(),
     });
     setstate(intialstate);
   };
