@@ -18,17 +18,11 @@ const BooksForm = ({
 
   const [state, setstate] = useState(intialstate);
 
-  const handleInputChange = event => {
+  const handleChange = event => {
+    event.preventDefault();
     setstate({
       ...state,
-      title: event.target.value,
-    });
-  };
-
-  const handleSelectChange = event => {
-    setstate({
-      ...state,
-      category: event.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
@@ -40,13 +34,14 @@ const BooksForm = ({
     });
     setstate(intialstate);
   };
+
   return (
     <form>
       <div className="form-group">
-        <input type="text" onChange={handleInputChange} className="form-control" id="title" placeholder="Title" value={state.title} />
+        <input type="text" onChange={handleChange} name="title" className="form-control" id="title" placeholder="Title" value={state.title} />
       </div>
       <div className="form-group">
-        <select className="form-control" onChange={handleSelectChange} id="category">
+        <select className="form-control" name="category" onChange={handleChange} id="category">
           {
         categories.map((category, index) => ( // eslint-disable-next-line react/no-array-index-key
           <option key={index} value={category}>
