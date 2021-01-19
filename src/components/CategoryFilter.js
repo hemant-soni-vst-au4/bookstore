@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { categories } from '../constants';
+import { categories } from '../constant';
 
 const CategoryFilter = ({
   filter,
@@ -13,7 +13,7 @@ const CategoryFilter = ({
     <select onChange={event => { handleFilterSelect(event.target.value); }}>
       {
         allCategories.map(category => (
-          <option key={Date.now()} value={category}>{category}</option>
+          <option key={Math.floor(Math.random() * 999999)} value={category}>{category}</option>
         ))
       }
     </select>

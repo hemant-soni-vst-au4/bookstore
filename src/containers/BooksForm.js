@@ -16,11 +16,11 @@ const BooksForm = ({
     category: categories[0],
   };
 
-  const [state, setstate] = useState(intialstate);
+  const [state, setState] = useState(intialstate);
 
   const handleChange = event => {
     event.preventDefault();
-    setstate({
+    setState({
       ...state,
       [event.target.name]: event.target.value,
     });
@@ -30,9 +30,9 @@ const BooksForm = ({
     if (state.title === '') return;
     createBook({
       ...state,
-      id: Date.now(),
+      id: Math.floor(Math.random() * 999999),
     });
-    setstate(intialstate);
+    setState(intialstate);
   };
 
   return (
@@ -43,8 +43,8 @@ const BooksForm = ({
       <div className="form-group">
         <select className="form-control" name="category" onChange={handleChange} id="category">
           {
-        categories.map((category, index) => ( // eslint-disable-next-line react/no-array-index-key
-          <option key={index} value={category}>
+        categories.map(category => ( // eslint-disable-next-line react/no-array-index-key
+          <option key={Math.floor(Math.random() * 999999)} value={category}>
             {category}
           </option>
         ))

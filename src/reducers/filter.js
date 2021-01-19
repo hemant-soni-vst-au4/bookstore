@@ -1,4 +1,4 @@
-import { CHANGE_FILTER } from '../constants';
+import { CHANGE_FILTER } from '../constant';
 
 const filter = (state = 'All', action) => {
   switch (action.type) {
