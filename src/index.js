@@ -23,6 +23,7 @@ const initialState = {
       category: 'Sci-fi',
     },
   ],
+  filter: 'All'
 };
 const store = createStore(reducer, initialState);
 
