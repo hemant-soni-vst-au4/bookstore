@@ -1,7 +1,8 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ book }) => {
+const Book = ({ book, handleRemoveBook }) => {
   const { title, category } = book;
 
   return (
@@ -14,12 +15,12 @@ const Book = ({ book }) => {
           {title}
         </div>
         <div className="book-author">
-          Hemant Soni
+          Tirthajyoti Ghosh
         </div>
         <div className="book-buttons">
           <div>Comments</div>
           <div>|</div>
-          <div role="button" tabIndex="-2" className="remove">Remove</div>
+          <div role="button" tabIndex="-2" className="remove" onClick={() => handleRemoveBook(book)}>Remove</div>
           <div>|</div>
           <div>Edit</div>
         </div>
@@ -36,12 +37,13 @@ const Book = ({ book }) => {
           CURRENT CHAPTER
         </div>
         <div className="Current-Lesson">
-          Book 4
+          Chapter 17
         </div>
         <div className="Rectangle-2">
           UPDATE PROGRESS
         </div>
       </div>
+
     </div>
   );
 };
@@ -52,7 +54,7 @@ Book.propTypes = {
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
   }).isRequired,
-  // handleRemoveBook: PropTypes.func.isRequired,
+  handleRemoveBook: PropTypes.func.isRequired,
 };
 
 export default Book;
