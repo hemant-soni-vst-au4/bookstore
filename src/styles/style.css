@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto+Slab:wght@300;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f5f6fa;
+}
+
+body #root {
+	margin: 0 auto;
+	max-width: 1600px;
+	padding: 149px 100px;
+}
+
+body #root .panel-bg {
+	max-width: 1400px;
+	border-radius: 4px;
+	box-shadow: 0 0 70px 0 rgba(0, 0, 0, 0.377);
+	background-color: #fafafa;
+}
+
+body #root .panel-bg nav {
+	padding: 30px 100px;
+	background-color: #ffffff;
+	border-bottom: solid 1px #e8e8e8;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+body #root .panel-bg nav .Bookstore-CMS {
+	width: 240px;
+	height: 37px;
+	font-family: Montserrat;
+	font-size: 30px;
+	font-weight: bold;
+	color: #0290ff;
+}
+
+body #root .panel-bg nav .BOOKS {
+	width: 59px;
+	height: 16px;
+	font-family: Montserrat;
+	font-size: 13px;
+	letter-spacing: 1.9px;
+	color: #121212;
+	padding-left: 45px;
+}
+
+body #root .panel-bg nav .CATEGORIES {
+	padding-left: 90px;
+}
+
+body #root .panel-bg nav .CATEGORIES select {
+	text-transform: uppercase;
+	height: 16px;
+	opacity: 0.5;
+	font-family: Montserrat;
+	font-size: 13px;
+	letter-spacing: 1.9px;
+	color: #121212;
+	background-color: inherit;
+	border: none;
+	outline: none;
+}
+
+body #root .panel-bg nav .Oval {
+	width: 45px;
+	height: 45px;
+	border: solid 1px #e8e8e8;
+	margin-left: auto;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body #root .panel-bg nav .Oval .fa-user {
+	color: #0290ff;
+	font-size: 20px;
+}
+
+body #root .panel-bg main {
+	background-color: #fafafa;
+	padding: 40px 100px;
+	padding-bottom: 240px;
+}
+

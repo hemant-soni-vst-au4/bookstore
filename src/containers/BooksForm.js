@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { categories } from '../constant';
-import { createBook } from '../actions/index';
+import { createBook } from '../actions';
 
 const mapDispatchToProps = dispatch => ({
   createBook: book => dispatch(createBook(book)),
@@ -11,18 +11,24 @@ const mapDispatchToProps = dispatch => ({
 const BooksForm = ({
   createBook,
 }) => {
-  const intialstate = {
+  const initialState = {
     title: '',
     category: categories[0],
   };
 
-  const [state, setState] = useState(intialstate);
+  const [state, setState] = useState(initialState);
 
-  const handleChange = event => {
-    event.preventDefault();
+  const handleInputChange = event => {
     setState({
       ...state,
-      [event.target.name]: event.target.value,
+      title: event.target.value,
+    });
+  };
+
+  const handleSelectChange = event => {
+    setState({
+      ...state,
+      category: event.target.value,
     });
   };
 
@@ -30,30 +36,31 @@ const BooksForm = ({
     if (state.title === '') return;
     createBook({
       ...state,
-      id: Math.floor(Math.random() * 999999),
+      id: Math.floor(Math.random() * 100),
     });
-    setState(intialstate);
+    setState({
+      title: '',
+      category: categories[0],
+    });
   };
 
   return (
-    <form>
-      <div className="form-group">
-        <input type="text" onChange={handleChange} name="title" className="form-control" id="title" placeholder="Title" value={state.title} />
-      </div>
-      <div className="form-group">
-        <select className="form-control" name="category" onChange={handleChange} id="category">
-          {
-        categories.map(category => ( // eslint-disable-next-line react/no-array-index-key
-          <option key={Math.floor(Math.random() * 999999)} value={category}>
-            {category}
-          </option>
-        ))
-        }
-        </select>
-      </div>
-      <button type="button" onClick={handleSubmit} className="btn btn-primary">
-        Add Book
-      </button>
+    <form className="book-form">
+      <input id="title" onChange={handleInputChange} value={state.title} placeholder="Book title" />
+      <select value={state.category} id="category" onChange={handleSelectChange}>
+        {
+            categories.map(category => (
+              <option
+                className={state.category}
+                key={Math.floor(Math.random() * 999999)}
+                value={category}
+              >
+                {category}
+              </option>
+            ))
+          }
+      </select>
+      <button onClick={handleSubmit} type="button">ADD BOOK</button>
     </form>
   );
 };
@@ -61,4 +68,8 @@ const BooksForm = ({
 BooksForm.propTypes = {
   createBook: PropTypes.func.isRequired,
 };
-export default connect(null, mapDispatchToProps)(BooksForm);
+
+export default connect(
+  null,
+  mapDispatchToProps,
+)(BooksForm);
