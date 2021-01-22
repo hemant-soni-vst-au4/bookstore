@@ -36,7 +36,7 @@ const Book = ({ book }) => {
           CURRENT CHAPTER
         </div>
         <div className="Current-Lesson">
-          Chapter 17
+          Book 4
         </div>
         <div className="Rectangle-2">
           UPDATE PROGRESS
