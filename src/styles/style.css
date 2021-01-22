@@ -90,3 +90,178 @@ body #root .panel-bg main {
 	padding-bottom: 240px;
 }
 
+body #root .panel-bg main .Book-Panel {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin-bottom: 15px;
+	padding: 32px 27px;
+	border-radius: 4px;
+	border: solid 1px #e8e8e8;
+	background-color: #ffffff;
+}
+
+body #root .panel-bg main .Book-Panel .book-information .book-category {
+	width: 49px;
+	height: 18px;
+	opacity: 0.5;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.1rem;
+	letter-spacing: normal;
+	color: #121212;
+}
+
+body #root .panel-bg main .Book-Panel .book-information .book-title {
+	width: 197px;
+	height: 29px;
+	font-family: 'Roboto Slab';
+	font-size: 22px;
+	font-weight: bold;
+	letter-spacing: -0.2px;
+	color: #121212;
+}
+
+body #root .panel-bg main .Book-Panel .book-information .book-author {
+	height: 19px;
+	font-family: 'Roboto Slab';
+	font-size: 14px;
+	font-weight: 300;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #4386bf;
+}
+
+body #root .panel-bg main .Book-Panel .book-information .book-buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 21px;
+	height: 19px;
+	font-family: 'Roboto Slab';
+	font-size: 14px;
+	font-weight: 300;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #4386bf;
+}
+
+body #root .panel-bg main .Book-Panel .book-information .book-buttons .remove {
+	cursor: pointer;
+}
+
+body #root .panel-bg main .Book-Panel .completion {
+	border-right: #f5f6fa 3px solid;
+	padding-right: 80px;
+	margin-left: auto;
+	margin-right: 60px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+@media screen and (max-width: 1440px) {
+	body #root .panel-bg main .Book-Panel .completion {
+		margin-right: 40px;
+		padding-right: 40px;
+	}
+}
+
+body #root .panel-bg main .Book-Panel .completion .Oval-2 {
+	width: 68px;
+	height: 68px;
+	border: 5px #307bbe solid;
+	border-radius: 50%;
+	margin-right: 21px;
+}
+
+body #root .panel-bg main .Book-Panel .completion .Percent-Complete {
+	width: 68px;
+	height: 39px;
+	font-family: Montserrat;
+	font-size: 32px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #121212;
+}
+
+body #root .panel-bg main .Book-Panel .completion .Completed {
+	width: 80px;
+	height: 18px;
+	opacity: 0.5;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #121212;
+}
+
+body #root .panel-bg main .Book-Panel .chapter {
+	margin-right: 5vw;
+}
+
+@media screen and (max-width: 1200px) {
+	body #root .panel-bg main .Book-Panel .chapter {
+		margin-right: 0;
+	}
+}
+
+body #root .panel-bg main .Book-Panel .chapter .Current-Chapter {
+	width: 126px;
+	height: 18px;
+	opacity: 0.5;
+	font-family: 'Roboto Slab';
+	font-size: 13px;
+	font-weight: 300;
+	color: #121212;
+	margin-bottom: 7px;
+}
+
+body #root .panel-bg main .Book-Panel .chapter .Current-Lesson {
+	margin-bottom: 30px;
+	width: 75px;
+	height: 21px;
+	font-family: 'Roboto Slab';
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: -0.4px;
+	color: #121212;
+}
+
+body #root .panel-bg main .Book-Panel .chapter .Rectangle-2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 184px;
+	height: 33px;
+	border-radius: 3px;
+	background-color: #0290ff;
+	font-family: 'Roboto Slab';
+	font-size: 13px;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	text-align: center;
+	color: #ffffff;
+}
+
+body #root .panel-bg main hr {
+	opacity: 0.2;
+	border-radius: 4px;
+	background-color: #f5f6fa;
+	margin: 40px 0;
+}
