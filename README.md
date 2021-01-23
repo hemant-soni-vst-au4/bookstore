@@ -8,6 +8,10 @@
 - JavaScript
 - Redux
 
+## Screenshot
+
+![image](./logo.png)
+
 ## Live Demo
 
 [Live Demo Link](https://quiet-beach-18707.herokuapp.com/)
